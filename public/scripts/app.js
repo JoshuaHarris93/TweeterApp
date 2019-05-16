@@ -103,9 +103,11 @@ $(document).ready(function() {
     const formData = $(this).serialize().split('=')[1];
   
     if (formData.length === 0) {
-      $(".error").slideDown().text('Error: not enough characters');
+      $(".error").text('Error: not enough characters');
+      $(".error").slideDown();
     } else if (formData.length > 140) {
-      $(".error").slideDown().text("Error: this exceeds the maximum character count");
+      $(".error").text("Error: this exceeds the maximum character count");
+      $(".error").slideDown()
     } else {
       $.ajax({
         method: "POST",

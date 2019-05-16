@@ -8,6 +8,8 @@
     padding: 0px 2em;
     top:0;
     z-index: 1;
+    animation-name: ex;
+  animation-duration: 60s;
 }
 
 #nav-bar .logo {
@@ -30,14 +32,16 @@
   display: inline-block;
   vertical-align: middle;
   transition: 0.3s ease-in-out;
+  text-shadow: 1px 1px 2px red;
+  
   
 }
-#nav-bar .header:hover {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        
-        text-shadow: #FC0 1px 0 10px;
-        
+
+@keyframes ex {
+    0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
 }
 
 #nav-bar button {
@@ -48,10 +52,15 @@
     margin-top: 20px;
     margin-right: 20px;
     opacity: 0.7;
+    transition: 0.2s ease-in-out;
+    
 }
 
 #nav-bar button:hover {
-
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    
+    background: linear-gradient(to right, rgb(222, 98, 98), rgb(255, 184, 140));
     opacity: 1;
 }
 
