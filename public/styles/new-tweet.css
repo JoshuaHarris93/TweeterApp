@@ -1,47 +1,45 @@
 .new-tweet h2 {
-    padding-top: 20px;
-    position: relative;
+  padding-top: 20px;
+  position: relative;
 }
 
 textarea {
-    padding: 5px;
-    resize: none;
-    width: 90%;  
+  padding: 5px;
+  resize: none;
+  width: 90%;
 }
 
 section.new-tweet {
-    width: 400px;
-    box-sizing: border-box;
-    border: 1px solid black;
-    border-radius: 14px;
-    margin: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    background: #eee;
-    margin-bottom: 25px;
+  width: 400px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 14px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #eee;
+  margin-bottom: 25px;
 }
 
 form {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .new-tweet .error {
-    color: #D8000C;
-    background-color: #FFBABA;
-    margin: auto;
-    border-radius: 10px;
-    width: 90%;
+  color: #d8000c;
+  background-color: #ffbaba;
+  margin: auto;
+  border-radius: 10px;
+  width: 90%;
 }
 
 .new-tweet h2 {
-    border-bottom: 1px solid black ;
-    padding-bottom: 15px;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
 }
 
 .flexible {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
 }
-

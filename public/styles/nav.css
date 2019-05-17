@@ -1,85 +1,79 @@
 /* NAV BAR STYLES: */
 #nav-bar {
-    position: fixed;
-    background-color: #00a087;
-    height: 80px;
-    width: 100%;
-    color: #e8fdff;
-    padding: 0px 2em;
-    top:0;
-    z-index: 1;
-animation-name: ex;
+  position: fixed;
+  background-color: #00a087;
+  height: 80px;
+  width: 100%;
+  color: #e8fdff;
+  padding: 0px 2em;
+  top: 0;
+  z-index: 1;
+  animation-name: ex;
   animation-duration: 30s;
 }
 
 #nav-bar .logo {
-    height: 80px;
-    width: 80px;
-    float: left;
-    padding-right: 12px;
-    transition: 1s ease-in-out;
+  height: 80px;
+  width: 80px;
+  float: left;
+  padding-right: 12px;
+  transition: 1s ease-in-out;
 }
 
 #nav-bar .logo:hover {
-    
-    transform: rotateY(180deg);
-
+  transform: rotateY(180deg);
 }
 
 #nav-bar .header {
-    font-size: 200%;
-    line-height: 2.2;
+  font-size: 200%;
+  line-height: 2.2;
   display: inline-block;
   vertical-align: middle;
   transition: 0.3s ease-in-out;
   text-shadow: 1px 1px 2px red;
-  
-  
 }
 
 @keyframes ex {
-    0%   {background-color: #00a087}
-  20%  {background-color: blue}
-  40%  {background-color: blueviolet}
-  60% {background-color: orange}
-  80% {background-color: orangered}
-  100% {background-color: #00a087}
-
+  0% {
+    background-color: #00a087;
+  }
+  20% {
+    background-color: blue;
+  }
+  40% {
+    background-color: blueviolet;
+  }
+  60% {
+    background-color: orange;
+  }
+  80% {
+    background-color: orangered;
+  }
+  100% {
+    background-color: #00a087;
+  }
 }
 
 #nav-bar button {
-    float: right;
-    line-height: 1.9em;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 20px;
-    margin-right: 20px;
-    opacity: 0.7;
-    transition: 0.2s ease-in-out;
-    
+  float: right;
+  line-height: 1.9em;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20px;
+  margin-right: 20px;
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
 }
 
 #nav-bar button:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    
-    background: linear-gradient(to right, rgb(222, 98, 98), rgb(255, 184, 140));
-    opacity: 1;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+
+  background: linear-gradient(to right, rgb(222, 98, 98), rgb(255, 184, 140));
+  opacity: 1;
 }
 
 #nav-bar .new-tweet .error {
-    color: #D8000C;
-    background-color: #FFBABA;
+  color: #d8000c;
+  background-color: #ffbaba;
 }
-
-
-
-
-
-
-
-
-
-
-
-

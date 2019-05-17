@@ -1,5 +1,7 @@
 const url = "/tweets";
 
+// All code within document ready prints to the page
+
 $(document).ready(function() {
   $(".new-tweet").hide();
 
@@ -10,10 +12,17 @@ $(document).ready(function() {
     }
   }
 
+  // Compose button toggles new tweet box on click
+
   $("button").on("click", function(event) {
     $(".new-tweet").toggle();
     $("textarea").select();
   });
+
+  /* Compose tweet box: Automatically selects text box on click, limits text entry to > 0 or < 140 characters
+   (and returns appropriate error if one of those limitations is not met), uses and AJAX POST request to ensure each
+   newly created tweet does not reload page upon submit.
+*/
 
   $("form").on("submit", function(event) {
     event.preventDefault();
@@ -51,6 +60,7 @@ $(document).ready(function() {
     }
   });
 
+  // GET request for loading previously created tweets
   function loadTweets() {
     $.ajax({
       method: "GET",
@@ -64,6 +74,7 @@ $(document).ready(function() {
       });
   }
 
+  // Appending new sections, tags, html elements to page using jQuery
   const createArticle = data => {
     // Creating the article tag
     const $article = $("<article>");
