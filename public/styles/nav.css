@@ -8,8 +8,8 @@
     padding: 0px 2em;
     top:0;
     z-index: 1;
-    animation-name: ex;
-  animation-duration: 60s;
+animation-name: ex;
+  animation-duration: 30s;
 }
 
 #nav-bar .logo {
@@ -38,10 +38,13 @@
 }
 
 @keyframes ex {
-    0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
+    0%   {background-color: #00a087}
+  20%  {background-color: blue}
+  40%  {background-color: blueviolet}
+  60% {background-color: orange}
+  80% {background-color: orangered}
+  100% {background-color: #00a087}
+
 }
 
 #nav-bar button {

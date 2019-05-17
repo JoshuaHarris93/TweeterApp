@@ -23,6 +23,7 @@ main {
   margin: auto;
   z-index: 140px;
   margin-top: 80px;
+  min-width: 425px;
 }
 
 main p {

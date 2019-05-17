@@ -128,6 +128,7 @@ $(document).ready(function() {
         });
         $(".error").slideUp();
         $('textarea').val('');
+        $('.counter').html(140);
     }
   
 
