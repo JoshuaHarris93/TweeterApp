@@ -44,6 +44,7 @@ $(document).ready(function() {
       })
 
         .done(response => {
+          $("#oldTweets").empty();
           loadTweets(url);
         })
         // Catching an error with the request
@@ -54,7 +55,7 @@ $(document).ready(function() {
         .always(() => {
           console.log("Request completed.");
         });
-      $(".error").slideUp();
+      $(".error").slideToggle();
       $("textarea").val("");
       $(".counter").html(140);
     }
@@ -74,6 +75,22 @@ $(document).ready(function() {
       });
   }
 
+  $("#oldTweets").on("mouseenter", "article", function(event) {
+    $(this).css("opacity", 1);
+    $(this)
+      .find(".icons")
+      .css("opacity", 1);
+    // console.log("mouseenter")
+  });
+
+  $("#oldTweets").on("mouseleave", "article", function(event) {
+    $(this).css("opacity", 0.5);
+    $(this)
+      .find(".icons")
+      .css("opacity", 0);
+    // console.log("mouseleave")
+  });
+
   // Appending new sections, tags, html elements to page using jQuery
   const createArticle = data => {
     // Creating the article tag
@@ -82,12 +99,12 @@ $(document).ready(function() {
     // Create header tag
     const $header = $("<header>");
 
-    // Creating the h2
+    // Creating the header
     const $image = $("<img>").attr("src", data["user"]["avatars"].small);
     const $name = $("<h2>").text(data["user"].name);
     const $handle = $("<p>").text(data["user"].handle);
 
-    // adding the h2 to the header
+    // appending to the header
     $header.append($image);
     $header.append($name);
     $header.append($handle);
@@ -115,8 +132,17 @@ $(document).ready(function() {
     $article.append($contentDiv);
     const $postDate = data.created_at;
     const $footer = $("<footer>").text(moment($postDate).fromNow());
+    const $iconDiv = $("<div>").addClass("icons");
+    const $flag = $("<i>").addClass("fas fa-flag");
+    const $retweet = $("<i>").addClass("fas fa-retweet");
+    const $like = $("<i>").addClass("fas fa-heart");
 
     $article.append($footer);
+    $iconDiv
+      .append($flag)
+      .append($retweet)
+      .append($like);
+    $footer.append($iconDiv);
 
     return $article;
   };

@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone (but far superior), setup using a combination of Express, AJAX, CSS, HTML, and jQuery. All tweet information is saved to our database (MongoDB).
+Tweeter is a simple, single-page Twitter clone. It uses a combination of Express, AJAX, CSS, HTML, jQuery, and MongoDB.
 
 ## Getting Started
 
